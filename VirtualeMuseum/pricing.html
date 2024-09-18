@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Navbar Example</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+        z-index: 1050;
+    }
+</style>
+<body>
+<header>
+  <h1 id="time">time</h1>
+
+  <script>
+    function displayCurrentTime() {
+      // Get the current date and time
+      const currentTime = new Date();
+
+      // Format the time in hours, minutes, and seconds
+      const hours = currentTime.getHours();
+      const minutes = currentTime.getMinutes();
+      const seconds = currentTime.getSeconds();
+
+      const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+      // Get the HTML element where the time will be displayed
+      document.getElementById("time").innerText =formattedTime;
+    }
+
+    // Update the time every second (1000 ms)
+    setInterval(displayCurrentTime, 1000);
+  </script>
+    <h2 class="display-4 text-center mt-5">Welcome to my virtual Museum website</h2>
+    <h3 class="display-5 mt-3 text-center">Welcome to the pricing part of the website</h3>
+</header>
+<nav class="navbar navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="collapse" id="navbarContent">
+    <div class="bg-light p-4">
+        <h4 class="h3 text-dark">Menu</h4>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#exhibits1">Exhibitions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Membership Card</h5>
+                <p class="card-text">$50 for the membership card</p>
+                <a>With the membership card you can go as many times as you want to the virtual museum</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Entry Cost</h5>
+                <p class="card-text">$5 for children</p>
+                <p class="card-text">$10 for adults over 18</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
