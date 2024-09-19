@@ -15,3 +15,10 @@
     right: 10px;
     font-size: 24px;
 }
+
+.rock-music-card {
+    margin-top: 270px; /* Adjust this value to move it down as needed */
+}
+.h4, h3, h2, h1, p {
+    cursor: default; /* Prevent text selection cursor */
+}
