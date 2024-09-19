@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light d-flex flex-row">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="bi bi-house"></span>
   </button>
@@ -18,25 +18,27 @@
 <div class="collapse" id="navbarContent">
   <div class="bg-light p-4">
     <h4 class="h3 text-dark">Menu</h4>
-    <ul class="navbar-nav ml-auto row">
-      <li class="nav-item active d-flex flex-nowrap">
-        <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+    <ul class="navbar-nav d-flex flex-row">
+      <li class="nav-item mr-4">
+        <a class="nav-link custom-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-4">
+        <a class="nav-link custom-link" href="#exhibits1">Exhibitions</a>
+      </li>
+      <li class="nav-item mr-4">
+        <a class="nav-link custom-link" href="signup.html">Login</a>
+      </li>
+      <li class="nav-item mr-4">
+        <a class="nav-link custom-link" href="pricing.html">Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#exhibits1">Exhibitions</a>
-      </li>
-      <li>
-        <a class="nav-link" href="signup.html">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pricing.html">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link custom-link" href="#contact">Contact</a>
       </li>
     </ul>
   </div>
 </div>
+
+
 
 <header>
   <h1 id="time" class="border">time</h1>
@@ -100,7 +102,7 @@
         </div>
       </div>
     </div>
-  </div>3
+  </div>
 </div>
 
 <section id="about" class="exhibit">

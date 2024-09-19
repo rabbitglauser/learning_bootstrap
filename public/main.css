@@ -22,3 +22,17 @@
 .h4, h3, h2, h1, p {
     cursor: default; /* Prevent text selection cursor */
 }
+
+.custom-link {
+    color: #000; /* Set to your desired color */
+    text-decoration: none; /* Remove underline */
+}
+
+.custom-link:hover {
+    color: #333; /* Set to a different color for hover effect if desired */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+.custom-link:focus {
+    box-shadow: none; /* Remove focus outline */
+}
