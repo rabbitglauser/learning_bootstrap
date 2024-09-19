@@ -2,36 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Toggle Navbar Example</title>
   <link href="main.css" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+  /* Add margin to move the Rock Music card down */
+  .rock-music-card {
+    margin-top: 270px; /* Adjust this value to move it down as needed */
+  }
+   h4, h3, h2, h1, p {
+     cursor: default; /* Prevent text selection cursor */
+   }
+</style>
+
 <body>
-<header>
-  <h1 id="time" class="border">time</h1>
-  <script>
-    function displayCurrentTime() {
-      // Get the current date and time
-      const currentTime = new Date();
-
-      // Format the time in hours, minutes, and seconds
-      const hours = currentTime.getHours();
-      const minutes = currentTime.getMinutes();
-      const seconds = currentTime.getSeconds();
-
-      const formattedTime = `${hours}:${minutes}:${seconds}`;
-
-      // Get the HTML element where the time will be displayed
-      document.getElementById("time").innerText =formattedTime;
-    }
-
-    // Update the time every second (1000 ms)
-    setInterval(displayCurrentTime, 1000);
-  </script>
-  <h2 class="display-4 text-center mt-5">Welcome to my virtual Museum website</h2>
-  <h3 class="display-5 mt-3 text-center">Discover different</h3>
-</header>
 <nav class="navbar navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -60,75 +46,78 @@
   </div>
 </div>
 
-<div class="container text-Left">
-  <section id="exhibits1" class="exhibit text-center">
-    <h2 class="display-5  mt-5 ">Biodiversität</h2>
-    <div class="d-flex justify-content-right">
-      <div class="col-md-4 text-center">
-        <div class="card text-center">
-          <img src="bio.jpg" class="card-img-top" alt="Biodiversität">
-          <div class="card-body">
-            <h5 class="display-6 card-title text-center">video Games</h5>
-            <p class="h5 card-text text-center">Experience for yourself biodiversity and the virtual museum </p>
-            <a href="#" class="btn btn-lg btn-primary">learn more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1 id="time" class="border">time</h1>
+  <script>
+    function displayCurrentTime() {
+      const currentTime = new Date();
+      const hours = currentTime.getHours();
+      const minutes = currentTime.getMinutes();
+      const seconds = currentTime.getSeconds();
+      const formattedTime = `${hours}:${minutes}:${seconds}`;
+      document.getElementById("time").innerText = formattedTime;
+    }
+    setInterval(displayCurrentTime, 1000);
+  </script>
+  <h2 class="display-4 text-center mt-5">Welcome to my virtual Museum website</h2>
+  <h3 class="display-5 p-5 text-center">Discover different</h3>
+</header>
+<section>
+  <div>
+    <img src="">
+  </div>
+</section>
 
-  <section id="exhibits2" class="exhibit  text-center">
-    <h2 class="display-5 text-center mt-5 text-muted">Rock music</h2>
-    <div class="d-flex justify-content-left">
-      <div class="col-md-4 text-center">
-        <div class="card text-center">
-          <img src="rock.jpg" class="card-img-top" alt="Rock music">
-          <div class="card-body">
-            <h5 class="display-6 card-title text-center">Rock and Roll</h5>
-            <p class="h5 card-text text-center">learn about the different people who developed the rock music through the different ages in the virtual museum</p>
-            <a href="#" class="btn btn-lg btn-primary">learn more</a>
-          </div>
+<div class="container">
+  <div class="row text-center">
+    <!-- Section 1: Biodiversity -->
+    <div class="col-sm-4">
+      <div class="card text-center font-size:10vw">
+        <img src="bio.jpg" class="card-img-top" alt="Biodiversität" style="width:100%;">
+        <div class="card-body">
+          <h5 class="card-title font-size:10vw">Biodiversität</h5>
+          <p class="card-text font-size:10vw">Experience biodiversity and the virtual museum</p>
+          <a href="#" class="btn btn-lg btn-primary font-size:10vw">Learn More</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="exhibits3" class="exhibit col text-center">
-    <h2 class="display-5 text-center mt-5 text-muted">Video games</h2>
-    <div class="d-flex justify-content-right">
-      <div class="col-md-4 text-center">
-        <div class="card text-center">
-          <img src="videoGames.jpg" class="card-img-top" alt="Video Games">
-          <div class="card-body">
-            <h5 class="display-6 card-title text-center">Video Games</h5>
-            <p class="h5 card-text text-center">learn about all the different video game genres at the virtual museum</p>
-            <a href="#" class="btn btn-lg btn-primary">learn more</a>
-          </div>
+    <!-- Section 2: Rock Music -->
+    <div class="col-sm-4 h-auto d-inline-block">
+      <div class="card text-center rock-music-card">
+        <img src="rock.jpg" class="card-img-top" alt="Rock Music" style="width:100%;">
+        <div class="card-body">
+          <h5 class="card-title font-size:10vw">Rock and Roll</h5>
+          <p class="card-text font-size:10vw">Learn about rock music through the ages in the virtual museum</p>
+          <a href="#" class="btn btn-lg btn-primary font-size:10vw">Learn More</a>
         </div>
       </div>
     </div>
-  </section>
+
+
+    <!-- Section 3: Video Games -->
+    <div class="col-sm-4">
+      <div class="card text-center font-size:10vw">
+        <img src="videoGames.jpg" class="card-img-top" alt="Video Games" style="width:100%;">
+        <div class="card-body">
+          <h5 class="card-title">Video Games</h5>
+          <p class="card-text">Learn about video game genres at the virtual museum</p>
+          <a href="#" class="btn btn-lg btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>3
 </div>
 
 <section id="about" class="exhibit">
-  <h2 class="display-5 text-center padding pt-4 font-weight-bold">about us</h2>
-  <p class="h5 text-center pt-2">This website was built by a young student at TIE-International.this website is using Html css and javascript</p>
-</section>
-
-<section class="exhibit text-center">
-  <h2 class="display-5 text-center pt-5 fot-weight-bold" id="contact">contact</h2>
-  <p class="h5 text-center pt-2">Contact us here:</p>
-  <ul class="list-unstyled text-center h5 pt-2 text-center">
-    <li>Email: <a href="mailto:info@virtuelmuseum.de">info@virtuelmuseum.de</a></li>
-    <li class="pt-2">Telefon: 079 371 07 09</li>
-  </ul>
+  <h2 class="display-5 text-center pt-4 font-weight-bold">About Us</h2>
+  <p class="h5 text-center pt-15">this site was built by a student at TIE-International, using HTML
 </section>
 
 <footer>
-  <p class="p-3 mb-2 bg-primary text-white text-center">All copyrights are reserved tot the Virtual Machine Company</p>
+  <p class="p-5 mb-2 bg-primary text-white text-center">All copyrights are reserved to the Virtual Museum Company</p>
 </footer>
 
-<!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
