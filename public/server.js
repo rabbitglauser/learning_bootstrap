@@ -12,7 +12,7 @@ app.use(express.static('public')); // Serve static files from 'public' folder
 
 // Serve the signup form
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'VirtualeMuseum', 'signup.html'));
+    res.sendFile(path.join(__dirname, 'signup.html'));
 });
 
 // Create the users table if it doesn't exist
@@ -38,5 +38,5 @@ app.post('/register', async (req, res) => {
 
 // Start the server
 app.listen(4000, () => {
-    console.log('Server is running on http://localhost:4000');
+    console.log('Server is running on http://localhost:5000');
 });
